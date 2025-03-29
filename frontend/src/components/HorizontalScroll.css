@@ -1,0 +1,24 @@
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for Firefox */
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .vignette-effect::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 90%);
+    pointer-events: none; /* Ensures it doesn't block interactions */
+  }
+  
