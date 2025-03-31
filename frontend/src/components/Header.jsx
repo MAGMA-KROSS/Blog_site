@@ -25,7 +25,7 @@ function Header() {
                         <rect y="17" width="50" height="6" rx="3" fill="white" />
                         <rect y="34" width="50" height="6" rx="3" fill="white" />
                     </svg>
-                    <Link>
+                    <Link to={"/"}>
                         <svg className="cursor-pointer" width="70" height="50" viewBox="0 0 70 50" xmlns="http://www.w3.org/2000/svg">
                             <text x="10" y="35" fontFamily="sans-serif" fontSize="30" fontWeight="bold" fill="white">M</text>
                             <text x="35" y="35" fontFamily="sans-serif" fontSize="30" fontWeight="bold" fill="orangered">B</text>

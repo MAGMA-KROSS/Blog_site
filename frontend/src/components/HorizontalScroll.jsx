@@ -39,7 +39,7 @@ const HorizontalScroll = () => {
   };
 
   return (
-    <div className="flex sm:z-0 z-10 gap-2 ml-4 justify-center lg:justify-baseline items-center w-full">
+    <div className="flex sm:z-0 z-10 gap-2 ml-4 justify-cente lg:justify-baseline items-center w-full">
       {/* Left Scroll Button */}
       <button
         onClick={scrollLeft}
@@ -62,7 +62,7 @@ const HorizontalScroll = () => {
       {/* Scrollable Container */}
       <div
         ref={scrollRef}
-        className="sm:w-[65%] w-[90%] overflow-x-auto scroll-smooth scrollbar-hidden"
+        className="sm:w-[100%] overflow-x-auto scroll-smooth scrollbar-hidden"
         onMouseDown={handleMouseDown}
       >
         <div className="flex space-x-5 p-5 w-max">
