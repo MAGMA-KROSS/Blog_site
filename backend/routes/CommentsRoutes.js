@@ -17,12 +17,26 @@ router.get("/comments", async (req, res) => {
 // Post a new comment
 router.post("/comments", async (req, res) => {
     try {
-        const newComment = new Comment({ text: req.body.text });
+        // Use the correct field names from your schema
+        const { BlogId, Comment: commentText, UserName } = req.body;
+        
+        // Validate required fields
+        if (!BlogId || !commentText || !UserName) {
+            return res.status(400).json({ error: "Missing required fields" });
+        }
+        
+        const newComment = new Comment({
+            BlogId,
+            Comment: commentText,
+            UserName
+        });
+        
         await newComment.save();
         res.status(201).json(newComment);
     } catch (error) {
+        console.error("Comment creation error:", error);
         res.status(500).json({ error: "Server Error" });
     }
 });
 
-module.exports = router; // ✅ Export the router correctly
+module.exports = router;
