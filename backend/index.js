@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const authRoutes = require("./routes/auth"); 
-
+const CommentRoutes = require("./routes/CommentsRoutes");
 
 
 const app = express();
@@ -11,7 +11,8 @@ app.use(express.json());
 app.use(cors());
 app.use("/api/auth", authRoutes);
 
-
+app.use(express.json()); // Middleware to parse JSON
+app.use("/api", CommentRoutes); // Mount routes
 
 const port = process.env.PORT || 8000; 
 const ConnectDB = async () => {

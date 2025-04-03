@@ -12,7 +12,7 @@ const Profile = () => {
 
   const logoutUser = () => {
     localStorage.removeItem('token');
-    navigate('/login'); // ✅ Now `useNavigate` is inside a component
+    navigate('/login'); 
   };
 
   useEffect(() => {
@@ -122,7 +122,7 @@ const Profile = () => {
               <button 
                 onClick={() => {
                   logoutUser()
-                  console.log('User logged out');
+                  
                 }}
                 className="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition duration-300"
               >

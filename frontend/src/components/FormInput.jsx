@@ -1,4 +1,3 @@
-// src/components/FormInput.jsx
 import React from 'react';
 
 const FormInput = ({ 

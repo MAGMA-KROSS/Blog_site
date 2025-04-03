@@ -29,7 +29,7 @@ const WeatherApp = () => {
   }, [CITY]);
 
   return (
-    <div className='bg-[#eceae5] p-4 rounded-lg shadow-md'>
+    <div className='bg-[#eceae5] cursor-pointer p-4 rounded-lg shadow-md'>
       <div className="flex items-center w-[300px] justify-between border-b-1 mb-4">
         <div className="flex items-center mr-2">
           <svg className="cursor-pointer" width="40" height="50" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg">
